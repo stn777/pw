@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "/Users/karthikkk/Downloads/playwright_UntilTestRunner/playwright.config.ts",
-    "rootDir": "/Users/karthikkk/Downloads/playwright_UntilTestRunner/tests",
+    "configFile": "D:\\test\\pw\\playwright.config.ts",
+    "rootDir": "D:/test/pw/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "totalTime": 25135.465000003576
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -24,7 +24,7 @@
         null
       ],
       [
-        "/Users/karthikkk/Downloads/playwright_UntilTestRunner/node_modules/allure-playwright/dist/index.js",
+        "D:\\test\\pw\\node_modules\\allure-playwright\\dist\\index.js",
         null
       ],
       [
@@ -41,12 +41,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "/Users/karthikkk/Downloads/playwright_UntilTestRunner/test-results",
+        "outputDir": "D:/test/pw/test-results",
         "repeatEach": 1,
         "retries": 0,
+        "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/Users/karthikkk/Downloads/playwright_UntilTestRunner/tests",
+        "testDir": "D:/test/pw/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -54,12 +55,13 @@
         "timeout": 30000
       },
       {
-        "outputDir": "/Users/karthikkk/Downloads/playwright_UntilTestRunner/test-results",
+        "outputDir": "D:/test/pw/test-results",
         "repeatEach": 1,
         "retries": 0,
+        "metadata": {},
         "id": "webkit",
         "name": "webkit",
-        "testDir": "/Users/karthikkk/Downloads/playwright_UntilTestRunner/tests",
+        "testDir": "D:/test/pw/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -69,19 +71,19 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.35.1",
+    "version": "1.49.0",
     "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "warehouse.spec.ts",
-      "file": "warehouse.spec.ts",
+      "title": "test-1.spec.ts",
+      "file": "test-1.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Navigating to Launge of Warehouse website",
+          "title": "locator strategy",
           "ok": true,
           "tags": [],
           "tests": [
@@ -93,38 +95,35 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 3,
                   "status": "passed",
-                  "duration": 23861,
+                  "duration": 9919,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-06-29T00:38:29.171Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/Users/karthikkk/Downloads/playwright_UntilTestRunner/test-results/warehouse-Navigating-to-Launge-of-Warehouse-website-chromium/video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/Users/karthikkk/Downloads/playwright_UntilTestRunner/test-results/warehouse-Navigating-to-Launge-of-Warehouse-website-chromium/trace.zip"
-                    }
-                  ]
+                  "startTime": "2024-12-06T19:35:31.938Z",
+                  "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "a645baeaf505bbc52b23-c0e9717240f9ba5832c9",
-          "file": "warehouse.spec.ts",
-          "line": 11,
+          "id": "492d4a3e7e76c4aacf4a-9f0a11ad88af5b9a2432",
+          "file": "test-1.spec.ts",
+          "line": 41,
           "column": 5
         }
       ]
     }
   ],
-  "errors": []
+  "errors": [],
+  "stats": {
+    "startTime": "2024-12-06T19:35:29.353Z",
+    "duration": 13717.832000000053,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
 }

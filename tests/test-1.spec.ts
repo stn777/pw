@@ -38,7 +38,7 @@ test('test', async ({ page }) => {
 
 });
 
-test('New version of Playwright with locator strategy', async ({ page }) => {
+test('locator strategy', async ({ page }) => {
   await page.goto('http://eaapp.somee.com/');
   await page.getByRole('link', { name: 'Login' }).click();
   await page.getByLabel('UserName').click();
@@ -55,7 +55,7 @@ test('New version of Playwright with locator strategy', async ({ page }) => {
   await page.getByLabel('Salary').press('Tab');
   await page.getByLabel('DurationWorked').fill('120');
   await page.getByLabel('DurationWorked').press('Tab');
-  await page.getByLabel('Grade').fill('10');
+  await page.selectOption('#Grade', '3');
   await page.getByLabel('Grade').press('Tab');
   await page.getByLabel('Email').fill('jacob@jacob.com');
   await page.getByRole('button', { name: 'Create' }).click();

@@ -40,17 +40,17 @@ jobs:
       with:
         name: playwright-report-${{ github.run_id }}-${{ github.job }}
         path: playwright-report/
-        retention-days: 30
-    - uses: actions/upload-artifact@v3
+        retention-days: 1
+    - uses: actions/upload-artifact@v5
       if: always()
       with:
           name: allure-report-${{ github.run_id }}-${{ github.job }}
           path: allure-report/
-          retention-days: 30
+          retention-days: 1
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-          name: blob-report
+          name: blob-report-${{ github.run_id }}-${{ github.job }}
           path: blob-report/
           retention-days: 1
 
@@ -95,13 +95,15 @@ jobs:
 
     - name: Merge into HTML Report
 
-      run: npx playwright merge-reports --reporter html ./blob-report
+      run: |
+          echo '{"testDir": "tests"}' > merge-config.json
+          npx playwright merge-reports --reporter html ./blob-report -c merge-config.json
 
 
 
     - name: Upload HTML report
 
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
 
       with:
 
@@ -109,4 +111,4 @@ jobs:
 
         path: blob-report
 
-        retention-days: 14
+        retention-days: 1

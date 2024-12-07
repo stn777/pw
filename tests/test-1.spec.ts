@@ -40,7 +40,9 @@ test('test', async ({ page }) => {
 
 test('locator strategy', async ({ page }) => {
   await page.goto('http://eaapp.somee.com/');
+
   await page.getByRole('link', { name: 'Login' }).click();
+  
   await page.getByLabel('UserName').click();
   await page.getByLabel('UserName').fill('admin');
   await page.getByLabel('UserName').press('Tab');

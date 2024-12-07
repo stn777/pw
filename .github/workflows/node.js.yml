@@ -50,7 +50,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-          name: blob-report-${{ github.run_id }}-${{ github.job }}
+          name: blob-report-${{ github.run_id }}
           path: blob-report/
           retention-days: 1
 
@@ -86,7 +86,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
 
-        name: blob-report-${{ github.run_id }}-${{ github.job }}
+        name: blob-report-${{ github.run_id }}
 
         path: blob-report/
 

@@ -38,13 +38,13 @@ jobs:
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: playwright-report-${{ github.run_id }}
+        name: playwright-report-${{ github.run_id }}-${{ github.job }}
         path: playwright-report/
         retention-days: 30
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-          name: allure-report-${{ github.run_id }}
+          name: allure-report-${{ github.run_id }}-${{ github.job }}
           path: allure-report/
           retention-days: 30
     - uses: actions/upload-artifact@v3

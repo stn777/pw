@@ -87,9 +87,9 @@ jobs:
 
       with:
 
-        name: blob-report
+        name: blob-report-${{ github.run_id }}
 
-        path: blob-report
+        path: blob-report/
 
 
 

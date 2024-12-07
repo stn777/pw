@@ -24,12 +24,13 @@ export default defineConfig({
     ['dot'],
     ['list'],
     ['allure-playwright'],
+    ['blob'],
     ['json', { outputFile: 'report.json' }]
   ],
   use: {
-    headless: true,
+    headless: false,
     baseURL: 'http://eaapp.somee.com',
-    browserName: 'firefox',
+    browserName: 'chromium',
     actionTimeout: 0,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -41,7 +42,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: {
-        headless: true,
+        headless: false,
         video: 'on',
         screenshot: 'only-on-failure',
         ...devices['Desktop Chrome'],

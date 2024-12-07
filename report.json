@@ -24,7 +24,11 @@
         null
       ],
       [
-        "D:\\test\\pw\\node_modules\\allure-playwright\\dist\\index.js",
+        "D:\\test\\pw\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ],
+      [
+        "blob",
         null
       ],
       [
@@ -77,13 +81,13 @@
   },
   "suites": [
     {
-      "title": "test-1.spec.ts",
-      "file": "test-1.spec.ts",
+      "title": "test-2.spec.ts",
+      "file": "test-2.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "locator strategy",
+          "title": "test",
           "ok": true,
           "tags": [],
           "tests": [
@@ -95,23 +99,29 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "status": "passed",
-                  "duration": 9919,
+                  "duration": 4869,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-06T19:35:31.938Z",
-                  "attachments": []
+                  "startTime": "2024-12-07T19:27:20.010Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\test\\pw\\test-results\\test-2-test-chromium\\video.webm"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "492d4a3e7e76c4aacf4a-9f0a11ad88af5b9a2432",
-          "file": "test-1.spec.ts",
-          "line": 41,
+          "id": "b0639a757ff76b21cdba-ef10cfa7ec7e1428db71",
+          "file": "test-2.spec.ts",
+          "line": 3,
           "column": 5
         }
       ]
@@ -119,8 +129,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-06T19:35:29.353Z",
-    "duration": 13717.832000000053,
+    "startTime": "2024-12-07T19:27:15.515Z",
+    "duration": 10836.526000000013,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

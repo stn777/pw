@@ -35,13 +35,13 @@ jobs:
           run: npx playwright test --shard ${{ matrix.shard }}
           continue-on-error: true
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v3
       if: ${{ !cancelled() }}
       with:
         name: playwright-report-${{ github.run_id }}-${{ github.job }}
         path: playwright-report/
         retention-days: 1
-    - uses: actions/upload-artifact@v5
+    - uses: actions/upload-artifact@v3
       if: always()
       with:
           name: allure-report-${{ github.run_id }}-${{ github.job }}
@@ -103,7 +103,7 @@ jobs:
 
     - name: Upload HTML report
 
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
 
       with:
 
